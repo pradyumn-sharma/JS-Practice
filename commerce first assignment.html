@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+    details > summary {
+        list-style-type: none;
+    }
+
+    details > summary::-webkit-details-marker {
+        display: none;
+    }
+
+    details > summary::before{
+        display: block;
+        height: 0.6em;
+        width: 0.6em;
+        font-size: 35px;
+        text-align: center;
+        line-height: 0.5em;
+        margin: 0;
+        float:right;
+        content:'+';
+        padding: 0;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: lighter;
+        color: #ffffff;
+        background-color: #000000;
+        transition-duration: 10s;
+        transition: all 10s ease;
+        animation: sweep .5s ease-in-out;
+        scroll-behavior: smooth;
+    }
+
+    details[open] > summary::before{
+        display: block;
+        height: 0.6em;
+        width: 0.6em;
+        font-size: 35px;
+        text-align: center;
+        line-height: 0.5em;
+        margin: 0;
+        float:right;
+        content:'-';
+        padding: 0;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: lighter;
+        color: #ffffff;
+        background-color: #000000;
+        transition-duration: 10s;
+        transition: all 10s ease;
+        animation: sweep .5s ease-in-out;
+        scroll-behavior: smooth;
+
+    }
+
+      
+    details[open] summary ~ * {
+        animation: sweep .5s ease-in-out;
+    }
+
+    h1,h2 {
+        animation: sweep .5s ease-in-out;
+    }
+
+    @keyframes sweep {
+        0%    {opacity: 0; transform: translateY(-10px)}
+        100%  {opacity: 1; transform: translateY(0)}
+    }
+
+    
+    </style>
+</head>
+<body>
+
+
+<h1>
+    Commerce First Assignment
+</h1>
+
+<div class="container">
+    <table class="table">
+        <tr> 
+            <td>
+                <details>
+                    <summary> <h2> Commerce  </h2> </summary>
+                    <p><b>Call</b>: Who will answer your call! :p </p>
+                    <p><b>Email</b>: Who will reply! :p </p>
+                </details>
+            </td>
+        </tr>
+
+        <tr> 
+            <td>
+                <details>
+                    <summary> <h2> Shipping policy </h2> </summary>
+                    <p> You dare to ship dis order!!</p>
+                </details>
+            </td>
+        </tr>
+
+        <tr> 
+            <td>
+                <details>
+                    <summary> <h2> Return Policy </h2> </summary>
+                    <p> You got pranked bro.. </p>
+                </details>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+</body>
+</html>
