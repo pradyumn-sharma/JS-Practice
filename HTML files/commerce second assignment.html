@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      let apiKey = "f5a7684ca8f9ced3aa54a600";
+
+      
+  
+      $(document).ready(function(){
+        $("button").click(function(){
+          fetch("https://v6.exchangerate-api.com/v6/" + apiKey + "/latest/USD")
+          .then(response => response.json())
+          .then(result => alert(result.conversion_rates.INR));
+/*
+          $.ajax({url: "https://v6.exchangerate-api.com/v6/" + apiKey + "/latest/USD",type: 'GET', success: function(result){
+            $("#div2").html( "<BR/> 1 USD : " + JSON.stringify(result.conversion_rates.INR) + " INR");
+            // alert(JSON.stringify(result));            
+          }});
+*/ 
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+
+    <div id="div1"><h2> Currency exchange.. </h2></div>
+
+    <button> GET INR value </button>
+
+    <div id="div2"> </div>
+  </body>
+</html>

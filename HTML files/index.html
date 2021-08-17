@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <body>
+            <script>
+                let CurrencyPair = prompt("enter Your currency pair here." , "USD_INR");
+                let url1 = 'https://free.currconv.com/api/v7/convert?q=';
+                let url2 = '&compact=ultra&apiKey=ed16b6b7d3d1c6f0e11f';
+
+                let url = url1 + CurrencyPair + url2 ;
+
+                fetch(url)
+                .then( response => { return response.json() }, reject => alert(`${CurrrencyPair} is not Valid. `))
+                .then(result => {
+                    
+                    let USD = prompt('Enter USD amount to convert in INR');
+                    confirm(`USD INR conversion rate is : ${result.USD_INR}`);
+                    let amount = USD * result.USD_INR;
+                    confirm(`${USD} USD = ${amount} INR`);
+
+                });
+
+            </script>
+        </body>
+        </body>
+    </head>
+</html>
